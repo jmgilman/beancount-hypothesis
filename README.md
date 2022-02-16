@@ -1,5 +1,11 @@
 # beancount-hypothesis
 
+<p align="center">
+    <a href="https://github.com/jmgilman/beancount-hypothesis/actions/workflows/ci.yml">
+        <img src="https://github.com/jmgilman/beancount-hypothesis/actions/workflows/ci.yml/badge.svg"/>
+    </a>
+</p>
+
 > A package which provides hypothesis strategies for generating beancount types.
 
 ## Usage
@@ -27,7 +33,7 @@ from hypothesis import given, strategies as s
         | h.transaction(),
         s.lists,
         max_leaves=5,
-    ).filter(reject)
+    )
 )
 ```
 
