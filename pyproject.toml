@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "beancount-hypothesis"
-version = "0.1.0"
+version = "0.1.1"
 description = "A package which provides hypothesis strategies for generating beancount types"
 authors = ["Joshua Gilman <joshuagilman@gmail.com>"]
 license = "MIT"
