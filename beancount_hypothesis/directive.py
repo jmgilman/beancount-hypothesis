@@ -128,6 +128,17 @@ def pad() -> s.SearchStrategy[data.Pad]:
     )
 
 
+def query() -> s.SearchStrategy[data.Query]:
+    """Generate a Query directive.
+
+    Returns:
+        A new search strategy
+    """
+    return directive(
+        data.Query,
+    )
+
+
 def posting() -> s.SearchStrategy[data.Posting]:
     """Generate a Posting.
 

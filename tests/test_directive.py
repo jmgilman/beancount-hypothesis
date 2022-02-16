@@ -84,6 +84,10 @@ def test_price():
     assert result.currency in ["USD", "CAD"]
 
 
+def test_query():
+    directive.query().example()
+
+
 def test_transaction():
     result = directive.transaction().example()
     assert result.flag == "*"
