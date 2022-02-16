@@ -4,6 +4,9 @@
     <a href="https://github.com/jmgilman/beancount-hypothesis/actions/workflows/ci.yml">
         <img src="https://github.com/jmgilman/beancount-hypothesis/actions/workflows/ci.yml/badge.svg"/>
     </a>
+    <a href="https://pypi.org/project/beancount-hypothesis">
+        <img src="https://img.shields.io/pypi/v/beancount-hypothesis"/>
+    </a>
 </p>
 
 > A package which provides hypothesis strategies for generating beancount types.
