@@ -88,4 +88,4 @@ def test_transaction():
     result = directive.transaction().example()
     assert result.flag == "*"
     assert len(result.narration.split(" ")) > 1
-    assert len(result.postings) <= 5
+    assert len(result.postings) <= 6
