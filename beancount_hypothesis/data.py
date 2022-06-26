@@ -61,15 +61,13 @@ def costspec(
     return s.builds(pos.CostSpec, currency=common.currency(currencies))
 
 
-@s.composite
-def inventory(draw: s.DrawFn) -> inv.Inventory:
+def inventory() -> s.SearchStrategy[inv.Inventory]:
     """Generates a random Inventory of Positions.
 
     Returns:
         A new search strategy.
     """
-    positions = draw(s.lists(position(), max_size=3))
-    return inv.Inventory(positions)
+    return s.builds(inv.Inventory, s.lists(position(), max_size=3))
 
 
 def position() -> s.SearchStrategy[pos.Position]:
