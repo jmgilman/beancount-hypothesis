@@ -2,9 +2,10 @@ import string
 
 from hypothesis import strategies as s
 from random_words import RandomWords  # type: ignore
+from typing import Optional
 
 
-def currency(currencies: list[str] = None) -> s.SearchStrategy[str]:
+def currency(currencies: Optional[list[str]] = None) -> s.SearchStrategy[str]:
     """Generates a random currency from the given list or a random one if None.
 
     Args:

@@ -1,6 +1,6 @@
 import decimal
 import random
-from typing import Any, TypeVar
+from typing import Optional, Any, TypeVar
 
 from beancount.core import amount, data
 from hypothesis import strategies as s
@@ -54,7 +54,7 @@ def close() -> s.SearchStrategy[data.Close]:
 
 
 def commodity(
-    currencies: list[str] = None,
+    currencies: Optional[list[str]] = None,
 ) -> s.SearchStrategy[data.Commodity]:
     """Generate a Commodity directive.
 
@@ -100,7 +100,7 @@ def note() -> s.SearchStrategy[data.Note]:
     return directive(data.Note, account=account.account_name())
 
 
-def open(currencies: list[str] = None) -> s.SearchStrategy[data.Open]:
+def open(currencies: Optional[list[str]] = None) -> s.SearchStrategy[data.Open]:
     """Generate an Open directive.
 
     Returns:
@@ -148,7 +148,7 @@ def posting() -> s.SearchStrategy[data.Posting]:
     return s.builds(data.Posting, meta=meta())
 
 
-def price(currencies: list[str] = None) -> s.SearchStrategy[data.Price]:
+def price(currencies: Optional[list[str]] = None) -> s.SearchStrategy[data.Price]:
     """Generate a Posting.
 
     Returns:
